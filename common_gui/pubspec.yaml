@@ -9,8 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    generate: true
   go_router: ^17.0.0
   country_flags: ^4.1.2
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:

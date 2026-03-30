@@ -5,8 +5,8 @@ import 'package:country_flags/country_flags.dart';
 
 // custom libraries
 
-class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MainAppBar({super.key});
+class DesktopMainAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const DesktopMainAppBar({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -21,6 +21,18 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [LanguageButton('en-US', 28), LanguageButton('de', 28)],
     );
+  }
+}
+
+class MobileMainAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const MobileMainAppBar({super.key});
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar();
   }
 }
 
